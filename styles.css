@@ -11,6 +11,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.github-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #333;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.github-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+    color: #0066cc;
+}
+
+.github-link:hover .github-icon {
+    transform: scale(1.1) rotate(2deg);
 }
 
 .calculator {

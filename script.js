@@ -7,7 +7,9 @@ function clearDisplay() {
     currentInput = '';
     operator = '';
     previousInput = '';
-    display.value = '';
+    display.value = 'Hello';
+    display.style.fontFamily = 'Orbitron, monospace';
+    display.style.color = '#00ff00';
 }
 
 function deleteLast() {
@@ -33,10 +35,20 @@ function appendToDisplay(value) {
 function updateDisplay() {
     if (previousInput && operator && currentInput) {
         display.value = previousInput + ' ' + operator + ' ' + currentInput;
+        display.style.fontFamily = 'Arial, sans-serif';
+        display.style.color = 'white';
     } else if (previousInput && operator) {
         display.value = previousInput + ' ' + operator + ' ';
-    } else {
+        display.style.fontFamily = 'Arial, sans-serif';
+        display.style.color = 'white';
+    } else if (currentInput) {
         display.value = currentInput;
+        display.style.fontFamily = 'Arial, sans-serif';
+        display.style.color = 'white';
+    } else {
+        display.value = 'Hello';
+        display.style.fontFamily = 'Orbitron, monospace';
+        display.style.color = '#00ff00';
     }
 }
 
